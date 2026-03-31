@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">MyBrand</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <h1>Welcome to Our Landing Page!</h1>
+        <p>Discover amazing products that will change your life.</p>
+    </header>
+    <section class="gic-banner">
+        <h2>Exclusive GIC Promotion!</h2>
+        <div class="countdown-timer" id="countdown">
+            <p>Time left: <span id="time"></span></p>
+        </div>
+    </section>
+    <section class="product-overview" id="products">
+        <h2>Our Products</h2>
+        <div class="product-card">
+            <h3>Product 1</h3>
+            <p>Description of Product 1.</p>
+        </div>
+        <div class="product-card">
+            <h3>Product 2</h3>
+            <p>Description of Product 2.</p>
+        </div>
+        <div class="product-card">
+            <h3>Product 3</h3>
+            <p>Description of Product 3.</p>
+        </div>
+    </section>
+    <section class="trust-indicators">
+        <h2>Why Trust Us?</h2>
+        <p>Our certifications and customer satisfaction ratings prove our quality.</p>
+    </section>
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="carousel">
+            <p>"Amazing product!" - Customer A</p>
+            <p>"Changed my life!" - Customer B</p>
+            <p>"Highly recommended!" - Customer C</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 MyBrand. All rights reserved.</p>
+    </footer>
+    <script>
+        // Countdown Timer Logic
+        const countdown = document.getElementById('countdown');
+        const targetDate = new Date('2026-04-01T00:00:00Z').getTime();
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById('time').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById('time').innerHTML = 'EXPIRED';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
