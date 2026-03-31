@@ -1,0 +1,107 @@
+:root {
+    --deep-navy: #0A1628;
+    --gold: #C9A84C;
+    --white: #FFFFFF;
+    --cool-grey: #F4F6F9;
+    --slate: #64748B;
+    
+    --font-size-h1: 56px;
+    --line-height-h1: 36px;
+    --font-size-h2: 40px;
+    --line-height-h2: 28px;
+    --font-size-body: 16px;
+    
+    --spacing: 8px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: var(--font-size-body);
+    background-color: var(--cool-grey);
+    color: var(--deep-navy);
+    margin: 0;
+    padding: var(--spacing);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.7);
+    padding: var(--spacing);
+}
+
+.hero {
+    background: linear-gradient(to bottom right, var(--deep-navy), var(--gold));
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.gic-banner {
+    background: linear-gradient(to right, var(--gold), var(--deep-navy));
+    color: var(--white);
+    padding: var(--spacing);
+    font-weight: bold;
+}
+
+.product-card {
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-counter {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--gold);
+}
+
+.testimonial-carousel {
+    margin: var(--spacing);
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-input:focus {
+    border: 2px solid var(--gold);
+    outline: none;
+}
+
+.footer {
+    background-color: var(--deep-navy);
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing);
+}
+
+@media (min-width: 1280px) {
+    /* Styles for desktop */
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    /* Styles for tablet */
+}
+
+@media (max-width: 767px) {
+    /* Styles for mobile */
+}
