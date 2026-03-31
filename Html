@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <h1>Your Future Starts Here</h1>
+        <p>Join us for the best investment opportunities!</p>
+        <a href="#products" class="btn">Explore Products</a>
+    </header>
+    
+    <!-- GIC Promotional Banner with Calculator -->
+    <section class="gic-promo">
+        <h2>Guaranteed Investment Certificate</h2>
+        <p>Secure your financial future with our GICs.</p>
+        <div class="calculator">
+            <h3>Investment Calculator</h3>
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount">
+            <label for="rate">Interest Rate (%):</label>
+            <input type="text" id="rate">
+            <label for="years">Years:</label>
+            <input type="text" id="years">
+            <button id="calculate">Calculate</button>
+            <p id="result"></p>
+        </div>
+    </section>
+    
+    <!-- Product Cards -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-card">
+            <h3>Product 1</h3>
+            <p>Description of product 1.</p>
+            <p>Price: $100</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>Product 2</h3>
+            <p>Description of product 2.</p>
+            <p>Price: $200</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h3>Product 3</h3>
+            <p>Description of product 3.</p>
+            <p>Price: $300</p>
+            <button class="btn">Buy Now</button>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <blockquote>
+            <p>"This service changed my life!" - Client A</p>
+        </blockquote>
+        <blockquote>
+            <p>"Highly recommend to everyone!" - Client B</p>
+        </blockquote>
+        <blockquote>
+            <p>"Exceptional support and service!" - Client C</p>
+        </blockquote>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Company. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
